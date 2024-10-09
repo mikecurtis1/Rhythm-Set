@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<h1>Factorial Permutation</h1>
+<div id="permutations">Factorial Permutations: <br /></div>
+<script>
+
+// https://stackoverflow.com/questions/9960908/permutations-in-javascript
+
+var html = '';
+
+//var arr = [];
+//var arr = ['A'];
+//var arr = ['A','B'];
+var arr = ['A','B','C'];
+//var arr = ['A','B','C','D'];
+//var arr = ['A','B','C','D','E'];
+
+function perms(xs) {
+	if (!xs.length) return [[]];
+	return xs.flatMap(x => {
+		// get permutations of xs without x, then prepend x to each
+		return perms(xs.filter(v => v!==x)).map(vs => [x, ...vs]);
+	});
+};
+
+const permutator = (inputArr) => {
+	let result = [];
+	const permute = (arr, m = []) => {
+		if (arr.length === 0) {
+			result.push(m);
+		} else {
+			for (let i = 0; i < arr.length; i++) {
+				let curr = arr.slice();
+				let next = curr.splice(i, 1);
+				permute(curr.slice(), m.concat(next));
+			}
+		}
+	}
+	permute(inputArr);
+
+	return result;
+}
+
+//arr3 = perms(arr);
+
+console.log(perms(arr));
+console.log(permutator(arr));
+
+//document.getElementById("permutations").insertAdjacentHTML("beforeend", `<div>Permutations: ${arr3}</div>`); // beforeend afterbegin
+
+</script>
+</body>
+</html>
