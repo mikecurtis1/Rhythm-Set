@@ -1,0 +1,34 @@
+body {
+	background-color: #bbbbaa;
+	font-family: gill sans, sans-serif;
+	padding:2em 4em;
+}
+ul {
+	line-height: 2em;
+}
+div#tuples{
+	padding:1em;
+	margin:2em;
+	background-color: #ffffff;
+	width:50%;
+	margin: auto;
+}
+div#tuples div {
+	margin:0;
+	padding:0;
+	background-color: #ffffff;
+	line-height:0;
+}
+img {
+	margin:0;
+	padding:0;
+	width:50%;
+}
+form {
+	padding:1em;
+	width:50%;
+	margin: auto;
+}
+form * {
+	display:inline;
+}

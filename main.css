@@ -1,0 +1,18 @@
+body {
+	background-color: #bbbbaa;
+	font-family: gill sans, sans-serif;
+	padding:2em 4em;
+}
+ul {
+	line-height: 2em;
+}
+div.meter img {
+	margin:0.5em 1em;
+	padding:0;
+	width:75%;
+	display:block;
+}
+div.meter {
+	display:table-cell;
+	
+}
